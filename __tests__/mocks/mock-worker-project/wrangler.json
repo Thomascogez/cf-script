@@ -1,0 +1,23 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "worker",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-01-21",
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_id": "00000000-0000-0000-0000-000000000000",
+			"database_name": "test-db"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "KV",
+			"id": "00000000-0000-0000-0000-000000000000",
+			"preview_id": "00000000-0000-0000-0000-000000000000"
+		}
+	]
+}

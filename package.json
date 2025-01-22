@@ -1,0 +1,36 @@
+{
+	"name": "cf-script",
+	"version": "0.0.1",
+	"description": "Run local script for you Cloudflare Workers",
+	"type": "module",
+	"bin": {
+		"cf-script": "./dist/index.js"
+	},
+	"scripts": {
+		"build:watch": "tsup --watch",
+		"build": "tsup",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"keywords": ["clouflare", "worker", "script"],
+	"author": "Thomas Cogez<thomas.cogez@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.10.7",
+		"@types/resolve": "^1.20.6",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.3",
+		"vitest": "^3.0.3",
+		"wrangler": "^3.103.2"
+	},
+	"dependencies": {
+		"commander": "^13.1.0",
+		"esbuild": "^0.24.2",
+		"jiti": "^2.4.2",
+		"ora": "^8.1.1",
+		"resolve": "^1.22.10"
+	},
+	"files": ["dist"],
+	"packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+}
