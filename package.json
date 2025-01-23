@@ -13,11 +13,16 @@
 		"test:watch": "vitest",
 		"check": "biome check"
 	},
-	"keywords": ["clouflare", "worker", "script"],
+	"keywords": [
+		"clouflare",
+		"worker",
+		"script"
+	],
 	"author": "Thomas Cogez<thomas.cogez@gmail.com>",
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@changesets/cli": "^2.27.11",
 		"@types/node": "^22.10.7",
 		"@types/resolve": "^1.20.6",
 		"tsup": "^8.3.5",
@@ -30,6 +35,8 @@
 		"jiti": "^2.4.2",
 		"ora": "^8.1.1"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
