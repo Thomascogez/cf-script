@@ -18,7 +18,15 @@
 		"worker",
 		"script"
 	],
-	"author": "Thomas Cogez<thomas.cogez@gmail.com>",
+	"author": "Thomascogez <thomas.cogez@gmail.com>",
+	"homepage": "https://github.com/Thomascogez/cf-script",
+	"bugs": {
+		"url": "https://github.com/Thomascogez/cf-script/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Thomascogez/cf-script.git"
+	},
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",

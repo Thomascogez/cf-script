@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <img src="assets/logo.png" alt="cf-script-logo" width="200">
+  <img src="./assets/logo.png" alt="cf-script-logo" width="200">
   <br>
   Cloudflare script
   <br>
@@ -16,7 +16,7 @@
 
 </p>
 
-![screenshot](assets/demo.gif)
+![screenshot](./assets/demo.gif)
 
 ## What is this ?
 
