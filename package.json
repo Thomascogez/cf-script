@@ -14,7 +14,7 @@
 		"check": "biome check"
 	},
 	"keywords": [
-		"clouflare",
+		"cloudflare",
 		"worker",
 		"script"
 	],
