@@ -1,6 +1,6 @@
 {
 	"name": "cf-script",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Run local script for you Cloudflare Workers",
 	"type": "module",
 	"bin": {
