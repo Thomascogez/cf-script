@@ -8,6 +8,7 @@ type Options = {
 	wranglerConfigPath?: string;
 	cwd: string;
 	scriptArgs?: Record<string, string>;
+	environment?: string;
 };
 
 export const runScript = async (scriptPath: string, options: Options) => {
@@ -17,6 +18,7 @@ export const runScript = async (scriptPath: string, options: Options) => {
 
 	const platform = await getPlatformProxy({
 		configPath: join(wranglerConfigPath),
+		environment: options.environment,
 		persist: { path: join(wranglerConfigDir, ".wrangler/state/v3") }
 	});
 

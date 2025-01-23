@@ -1,260 +1,95 @@
-<div align="center">
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Cloudflare script</h1>
-  
-  <p>
-    A simple cli tool that allow to run local script that can access clouflare context! 
-  </p>
+<h1 align="center">
+  <br>
+  <img src="assets/logo.png" alt="cf-script-logo" width="200">
+  <br>
+  Cloudflare script
+  <br>
+</h1>
 
-  
-<!-- Badges -->
-<p>
-  <a href="https://github.com/Thomascogez/cf-script/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Thomascogez/cf-script" alt="contributors" />
+<h4 align="center">A simple CLI tool that allow to run local scripts that can access your Worker bindings</h4>
+
+<p align="center">
+  <a href="https://badge.fury.io/js/cf-script">
+    <img src="https://badge.fury.io/js/cf-script.svg" alt="cf-script">
   </a>
-  <a href="">
-    <img src="https://img.shields.io/github/last-commit/Thomascogez/cf-script" alt="last update" />
-  </a>
-  <a href="https://github.com/Thomascogez/cf-script/network/members">
-    <img src="https://img.shields.io/github/forks/Thomascogez/cf-script" alt="forks" />
-  </a>
-  <a href="https://github.com/Thomascogez/cf-script/stargazers">
-    <img src="https://img.shields.io/github/stars/Thomascogez/cf-script" alt="stars" />
-  </a>
-  <a href="https://github.com/Thomascogez/cf-script/issues/">
-    <img src="https://img.shields.io/github/issues/Thomascogez/cf-script" alt="open issues" />
-  </a>
-  <a href="https://github.com/Thomascogez/cf-script/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Thomascogez/cf-script.svg" alt="license" />
-  </a>
+
 </p>
-   
-<h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template">Documentation</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Report Bug</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">Request Feature</a>
-  </h4>
-</div>
 
-<br />
+![screenshot](assets/demo.gif)
 
-<!-- Table of Contents -->
-# :notebook_with_decorative_cover: Table of Contents
+## What is this ?
 
-- [About the Project](#star2-about-the-project)
-  * [Tech Stack](#space_invader-tech-stack)
-  * [Features](#dart-features)
-  * [Color Reference](#art-color-reference)
-  * [Environment Variables](#key-environment-variables)
-- [Getting Started](#toolbox-getting-started)
-  * [Prerequisites](#bangbang-prerequisites)
-  * [Installation](#gear-installation)
-  * [Run Locally](#running-run-locally)
-- [Usage](#eyes-usage)
-- [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-  * [Code of Conduct](#scroll-code-of-conduct)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
-  
+When working with cloudflare worker and cloudflare platform locally we don't have any easy way to directly access
+Worker bindings such has (kv, r2, d1, ...).
 
-<!-- About the Project -->
-## :star2: About the Project
+This is by the nature of the secure cloudflare design where the bindings are provided to the app and not directly accessible.
 
-<div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
-</div>
+So cf-script allow to run piece of code (scripts) that have access to your local cloudflare worker bindings. This can allow you to:
 
+- Run one time sql query against your D1 database
+- List, debug, write value in your KV database
+- Download a file from your R2 bucket
 
-<!-- TechStack -->
-### :space_invader: Tech Stack
+## How To Use
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-    <li><a href="https://go.dev/">Golang</a></li>
-    <li><a href="https://nestjs.com/">Nest.js</a></li>
-    <li><a href="https://socket.io/">SocketIO</a></li>
-    <li><a href="https://www.prisma.io/">Prisma</a></li>    
-    <li><a href="https://www.apollographql.com/">Apollo</a></li>
-    <li><a href="https://graphql.org/">GraphQL</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.mysql.com/">MySQL</a></li>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-    <li><a href="https://redis.io/">Redis</a></li>
-    <li><a href="https://neo4j.com/">Neo4j</a></li>
-    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
-    <li><a href="https://circleci.com/">CircleCLI</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-### :dart: Features
-
-- Feature 1
-- Feature 2
-- Feature 3
-
-<!-- Color Reference -->
-### :art: Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Primary Color | ![#222831](https://via.placeholder.com/10/222831?text=+) #222831 |
-| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
-| Accent Color | ![#00ADB5](https://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
-| Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
-
-
-<!-- Env Variables -->
-### :key: Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-<!-- Getting Started -->
-## 	:toolbox: Getting Started
-
-<!-- Prerequisites -->
-### :bangbang: Prerequisites
-
-This project uses Yarn as package manager
+### 1. Install
 
 ```bash
- npm install --global yarn
+npm install cf-script # For local project install
+
+# or
+
+npm install cf-script -g # For global install
 ```
 
-<!-- Installation -->
-### :gear: Installation
+### 2. Write your first script
 
-Install my-project with npm
+In order to write script you need to create a new file either (.ts or .js) and make it export by default a function
 
-```bash
-  yarn install my-project
-  cd my-project
-```
-
-
-<!-- Run Locally -->
-### :running: Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  yarn install
-```
-
-Start the server
-
-```bash
-  yarn start
-```
-
-
-<!-- Usage -->
-## :eyes: Usage
-
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
-
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
+```ts
+export default (env, args) => {
+  console.log("Running script with following bindings ", env)
+  console.log("And following args ", args)
 }
 ```
 
-<!-- Roadmap -->
-## :compass: Roadmap
+### 3. Run your script
 
-* [x] Todo 1
-* [ ] Todo 2
+```bash
+cf-script ./scripts/my-first-script.ts
+```
 
-<!-- Contributing -->
-## :wave: Contributing
+And that it 🎉
 
-<a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" />
-</a>
+You can check examples in the `/dogfood` folder (including one using typescript)
 
+## CLI args
 
-Contributions are always welcome!
+| Name | Description | Default | Example |
+| --- | --- | --- | --- |
+| `--env` | Environment to run the script in | undefined (default wrangler env) | --env staging |
+| `--wcp` | Path to the wrangler config file | undefined (by default it will look for the closest one from cwd) | --wcp ./wrangler.toml |
+| `--cwd` | Current working directory | process.cwd() | --cwd ./my-project |
+| `--sa` | Args that will be passed to the executed script | undefined (no args) | --sa foo:bar or --sa foo:bar biz:baz |
 
-See `contributing.md` for ways to get started.
+## Credits
 
+This software uses the following open source packages:
 
-<!-- Code of Conduct -->
-### :scroll: Code of Conduct
+- [jiti](https://github.com/unjs/jiti)
+- [wrangler](https://github.com/cloudflare/workers-sdk)
+- [commander](https://github.com/tj/commander.js)
+- [ora](https://github.com/sindresorhus/ora)
+- [vitest](https://github.com/vitest-dev/vitest)
+- [biome](https://github.com/biomejs/biome)
+- [tsup](https://github.com/egoist/tsup)
 
-Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-template/blob/master/CODE_OF_CONDUCT.md)
+## License
 
+MIT
 
-<!-- License -->
-## :warning: License
+---
 
-Distributed under the no License. See LICENSE.txt for more information.
-
-
-<!-- Contact -->
-## :handshake: Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
-
-<!-- Acknowledgments -->
-## :gem: Acknowledgements
-
-Use this section to mention useful resources and libraries that you have used in your projects.
-
- - [Shields.io](https://shields.io/)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#travel--places)
- - [Readme Template](https://github.com/othneildrew/Best-README-Template)
+> GitHub [@Thomascogez](https://github.com/Thomascogez) &nbsp;&middot;&nbsp;
+> X [@Thomascogez](https://x.com/ThomasCogez)
