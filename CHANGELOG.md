@@ -1,5 +1,11 @@
 # cf-script
 
+## 0.0.3
+
+### Patch Changes
+
+- ecc909c: Export run script command for programatic usage
+
 ## 0.0.2
 
 ### Patch Changes
