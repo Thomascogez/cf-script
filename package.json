@@ -4,14 +4,22 @@
 	"description": "Run local script for you Cloudflare Workers",
 	"type": "module",
 	"bin": {
-		"cf-script": "./dist/index.js"
+		"cf-script": "./dist/cli.js"
+	},
+	"exports": {
+		"./package.json": "./package.json",
+		"./run-script": {
+			"import": "./dist/commands/run-script.js",
+			"types": "./dist/commands/run-script.d.ts"
+		}
 	},
 	"scripts": {
 		"build:watch": "tsup --watch",
 		"build": "tsup",
 		"test": "vitest run",
 		"test:watch": "vitest",
-		"check": "biome check"
+		"check": "biome check",
+		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
 	},
 	"keywords": [
 		"cloudflare",
