@@ -1,5 +1,11 @@
 # cf-script
 
+## 0.0.4
+
+### Patch Changes
+
+- 16f1c1f: Bump project dependencies
+
 ## 0.0.3
 
 ### Patch Changes
