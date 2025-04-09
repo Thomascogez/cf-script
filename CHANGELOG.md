@@ -1,5 +1,11 @@
 # cf-script
 
+## 0.1.0
+
+### Minor Changes
+
+- ce188ff: Bump major dependencies
+
 ## 0.0.5
 
 ### Patch Changes
