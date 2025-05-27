@@ -1,5 +1,11 @@
 # cf-script
 
+## 0.1.1
+
+### Patch Changes
+
+- 462cfa5: Bump dependencies
+
 ## 0.1.0
 
 ### Minor Changes
