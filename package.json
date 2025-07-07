@@ -39,7 +39,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@changesets/cli": "^2.27.11",
-		"@types/node": "^22.10.7",
+		"@types/node": "^24.0.10",
 		"@types/resolve": "^1.20.6",
 		"tsup": "^8.3.5",
 		"typescript": "^5.7.3",
