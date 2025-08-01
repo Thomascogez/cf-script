@@ -9,6 +9,7 @@ type Options = {
 	cwd: string;
 	scriptArgs?: Record<string, string>;
 	environment?: string;
+	experimentalRemoteBinding?: boolean;
 };
 
 export const runScript = async (scriptPath: string, options: Options) => {
@@ -19,7 +20,10 @@ export const runScript = async (scriptPath: string, options: Options) => {
 	const platform = await getPlatformProxy({
 		configPath: join(wranglerConfigPath),
 		environment: options.environment,
-		persist: { path: join(wranglerConfigDir, ".wrangler/state/v3") }
+		persist: { path: join(wranglerConfigDir, ".wrangler/state/v3") },
+		experimental: {
+			remoteBindings: options.experimentalRemoteBinding ?? false
+		}
 	});
 
 	const resolvedScriptPath = resolvePath(process.cwd(), scriptPath);

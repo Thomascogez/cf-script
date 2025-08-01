@@ -10,7 +10,7 @@ export const findWranglerConfigRoot = async (directory = process.cwd()): Promise
 		const nextPath = normalize(join(directory, ".."));
 
 		if (!nextPath || nextPath === directory) {
-			throw new Error("Could not find wrangler(.toml|.json) file");
+			throw new Error("Could not find wrangler(.toml|.json|.jsonc) file");
 		}
 
 		return await findWranglerConfigRoot(nextPath);
