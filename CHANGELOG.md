@@ -1,5 +1,11 @@
 # cf-script
 
+## 0.2.1
+
+### Patch Changes
+
+- 08e9440: Rename --experimental-remote-binding to --experimental-remote-bindings
+
 ## 0.2.0
 
 ### Minor Changes
