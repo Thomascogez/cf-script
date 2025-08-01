@@ -137,3 +137,7 @@ dist
 
 .wrangler
 .test-out
+
+.DS_Store
+
+*.tgz

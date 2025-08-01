@@ -33,7 +33,7 @@ jobs:
           run: pnpm install --frozen-lockfile
 
         - name: Checks
-          run: pnpm run check
+          run: pnpm run checks
         
         - name: Build
           run: pnpm run build

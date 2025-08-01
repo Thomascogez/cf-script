@@ -14,5 +14,6 @@
 		"module": "preserve",
 		"noEmit": true,
 		"lib": ["es2022"]
-	}
+	},
+	"exclude": ["dogfood"]
 }

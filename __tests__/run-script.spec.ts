@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { mkdir, readFile, rm } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { type PlatformProxy, getPlatformProxy } from "wrangler";
+import { getPlatformProxy, type PlatformProxy } from "wrangler";
 import { runScript } from "../src/commands/run-script";
 
 const mockWorkerProjectPath = resolve(join(import.meta.dirname, "mocks", "mock-worker-project"));
