@@ -9,7 +9,7 @@ type Options = {
 	cwd: string;
 	scriptArgs?: Record<string, string>;
 	environment?: string;
-	experimentalRemoteBinding?: boolean;
+	experimentalRemoteBindings?: boolean;
 };
 
 export const runScript = async (scriptPath: string, options: Options) => {
@@ -22,7 +22,7 @@ export const runScript = async (scriptPath: string, options: Options) => {
 		environment: options.environment,
 		persist: { path: join(wranglerConfigDir, ".wrangler/state/v3") },
 		experimental: {
-			remoteBindings: options.experimentalRemoteBinding ?? false
+			remoteBindings: options.experimentalRemoteBindings ?? false
 		}
 	});
 

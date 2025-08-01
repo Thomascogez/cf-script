@@ -72,7 +72,7 @@ You can check examples in the `/dogfood` folder (including one using typescript)
 | `--wcp` | Path to the wrangler config file | undefined (by default it will look for the closest one from cwd) | --wcp ./wrangler.toml |
 | `--cwd` | Current working directory | process.cwd() | --cwd ./my-project |
 | `--sa` | Args that will be passed to the executed script | undefined (no args) | --sa foo:bar or --sa foo:bar biz:baz |
-| `--erb` | Enable experimental remote binding support | false | --experimental-remote-binding |
+| `--erb` | Enable experimental remote bindings support | false | --experimental-remote-bindings |
 
 ## Credits
 

@@ -10,7 +10,7 @@ type CliOptions = {
 	cwd: string;
 	scriptArgs?: string[];
 	environment?: string;
-	experimentalRemoteBinding?: boolean;
+	experimentalRemoteBindings?: boolean;
 };
 
 program
@@ -18,7 +18,7 @@ program
 	.option("--cwd", "Current working directory", process.cwd())
 	.option("--sa, --script-args <arg:value...>", "Args that will be passed to the executed script (e.g. --sa foo:bar)")
 	.option("--env, --environment <env>", "Wrangler Environment to use when running the script")
-	.option("--erb, --experimental-remote-binding", "Enable experimental remote binding support")
+	.option("--erb, --experimental-remote-bindings", "Enable experimental remote bindings support")
 	.arguments("<script>")
 	.parse();
 
@@ -39,7 +39,7 @@ try {
 		wranglerConfigPath: options.wranglerConfigPath,
 		cwd: options.cwd,
 		environment: options.environment,
-		experimentalRemoteBinding: options.experimentalRemoteBinding
+		experimentalRemoteBindings: options.experimentalRemoteBindings
 	});
 
 	console.log();
