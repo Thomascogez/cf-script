@@ -40,7 +40,7 @@ describe("src/commands/run-script", () => {
 	it("should not run a script where wrangler config could not be found", async () => {
 		const scriptPath = join(invalidMockWorkerProjectPath, "scripts", "script.ts");
 
-		await expect(runScript(scriptPath, { cwd: invalidMockWorkerProjectPath })).rejects.toThrowError("Could not find wrangler(.toml|.json) file");
+		await expect(runScript(scriptPath, { cwd: invalidMockWorkerProjectPath })).rejects.toThrowError("Could not find wrangler(.toml|.json|.jsonc) file");
 	});
 
 	it("should run a script that has a function as default export", async () => {
