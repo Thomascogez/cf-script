@@ -1,5 +1,11 @@
 # cf-script
 
+## 0.2.0
+
+### Minor Changes
+
+- bfdfe1b: Add support for experimental platform proxy
+
 ## 0.1.1
 
 ### Patch Changes
